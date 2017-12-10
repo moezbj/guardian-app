@@ -1,0 +1,26 @@
+.main-div{
+display: flex;
+flex-direction: column;
+}
+.formSearch{
+  padding-top: 10px;
+width: 300px;
+
+display: flex;
+align-self: flex-end;
+}
+.results{
+width:60%;
+}
+.result{
+padding: 10px 0 10px 0;
+}
+.section{
+  width:20%;
+  background-color: red;
+}
+.footer{
+  align-self: flex-end;
+  background-color: green;
+  height: 50px;
+}

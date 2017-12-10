@@ -1,0 +1,21 @@
+/*.App {
+  text-align: center;
+}*/
+.App-title {
+  font-size: 1.5em;
+  align-self: center;
+}
+.App-intro {
+  font-size: large;
+}
+.head{
+  width: 100%;
+  height: 100px;
+  background-color: #343a40;
+  display: flex;
+  justify-content: center;
+  color:#868e96
+}
+.card{
+  margin:  10px 0px 10px 0px;
+}
