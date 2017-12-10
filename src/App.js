@@ -20,7 +20,7 @@ class App extends Component {
         </div>
         <BarTitles />
             <Search />
-            
+
             <Pages />
       </div>
     );

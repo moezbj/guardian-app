@@ -10,23 +10,24 @@ class Pages extends Component {
 
   handlePageChange(pageNumber) {
     console.log(`active page is ${pageNumber}`);
-    this.setState({activePage: pageNumber});
+    this.setState({
+      activePage: pageNumber});
   }
 
   render() {
     return (
       <div>
       <Pagination
-      pageRangeDisplayed={10}
-  prevPageText='prev'
-  nextPageText='next'
-  firstPageText='first'
-  lastPageText='last'
-  activePage={this.state.activePage}
-  itemsCountPerPage={10}
-  totalItemsCount={45}
-  onChange={this.handlePageChange}
-/>
+            pageRangeDisplayed={10}
+            prevPageText='prev'
+            nextPageText='next'
+            firstPageText='first'
+            lastPageText='last'
+            activePage={this.state.activePage}
+            itemsCountPerPage={10}
+            totalItemsCount={45}
+            onChange={this.handlePageChange}
+          />
       </div>
     );
   }

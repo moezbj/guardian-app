@@ -13,17 +13,16 @@ class BarTitles extends Component {
   super(props);
   this.state = {
     posts: [],
-    politcs:'Politics',
-    music:'Music',
-    movies:'Movies',
-    sports:'Sports'
+    Clickvalue:''
   }
   }
 
   searchNews1(value) {
-    console.log(this.state.Value);
+    this.setState({
+      Clickvalue:value
+    })
     axios.get('https://content.guardianapis.com/search?q='+
-       this.state.value +'&api-key=test&show-fields=starRating,headline,thumbnail')
+       value +'&api-key=test&show-fields=starRating,headline,thumbnail')
              .then(response => {
          // console.log(response.data.response.results)
          this.setState({ posts: response.data.response.results });
@@ -46,16 +45,16 @@ class BarTitles extends Component {
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav navbar justify-content-center">
             <li className="nav-item">
-              <Link className="nav-link" to="/pages/Politics"  onClick={() =>this.searchNews1(this.state.politics)} >Politics</Link>
+              <Link className="nav-link" to="/pages/Politics"  onClick={() =>this.searchNews1('Politics')} >Politics</Link>
             </li>
             <li className="nav-item">
-             <Link className="nav-link" to="/pages/Sports"onClick={() =>this.searchNews1(this.state.sports)} >Sports</Link>
+             <Link className="nav-link" to="/pages/Sports"onClick={() =>this.searchNews1('Sports')} >Sports</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/pages/Music" onClick={() =>this.searchNews1(this.state.music)} >Music</Link>
+              <Link className="nav-link" to="/pages/Music" onClick={() =>this.searchNews1('Music')} >Music</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/pages/Movies" onClick={() =>this.searchNews1(this.state.movies)} >Movies</Link>
+              <Link className="nav-link" to="/pages/Movies" onClick={() =>this.searchNews1('Movies')} >Movies</Link>
             </li>
           </ul>
         </div>
